@@ -1,0 +1,60 @@
+{
+  "account_id": "123456789012",
+  "region": "us-east-1",
+  "generated_at": "2025-01-01T00:00:00+00:00",
+  "iam": {
+    "policy_attachments": [
+      {
+        "entity_type": "role",
+        "entity_name": "AppRole",
+        "policy_arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
+        "policy_name": "ReadOnlyAccess",
+        "policy_hash": "hash-readonly"
+      }
+    ],
+    "role_trusts": [
+      {
+        "role_name": "AppRole",
+        "trust_hash": "trusthash-v1"
+      }
+    ],
+    "access_keys": [
+      {
+        "user_name": "alice",
+        "access_key_id": "AKIAOLD",
+        "create_date": "2024-01-01T00:00:00+00:00"
+      }
+    ]
+  },
+  "exposure": {
+    "security_group_rules": [
+      {
+        "sg_id": "sg-111",
+        "port": 22,
+        "protocol": "tcp",
+        "cidr": "0.0.0.0/0"
+      }
+    ],
+    "s3_public_access": [
+      {
+        "bucket": "my-bucket",
+        "public_access_block": true,
+        "public_policy": false
+      }
+    ]
+  },
+  "logging": {
+    "cloudtrail_trails": [
+      {
+        "name": "OrgTrail",
+        "is_multi_region": true,
+        "log_file_validation": true,
+        "is_logging": true
+      }
+    ],
+    "config_recorder": {
+      "recorders": ["default"],
+      "enabled": true
+    }
+  }
+}

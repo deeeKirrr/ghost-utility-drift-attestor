@@ -1,0 +1,8 @@
+{
+  "suppressions": [
+    {
+      "match": "my-bucket",
+      "reason": "Approved public bucket for static site"
+    }
+  ]
+}

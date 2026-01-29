@@ -1,0 +1,211 @@
+{
+  "metadata": {
+    "account_id": "123456789012",
+    "region": "us-east-1",
+    "generated_at": "2025-02-01T00:00:00+00:00"
+  },
+  "summary": {
+    "counts": {
+      "IAM": 3,
+      "Exposure": 1,
+      "Logging": 3
+    }
+  },
+  "top_changes": [
+    {
+      "id": "logging:cloudtrail_disabled:trail:OrgTrail",
+      "category": "Logging",
+      "severity": "Critical",
+      "description": "CloudTrail logging disabled for OrgTrail",
+      "evidence": {
+        "trail": "OrgTrail"
+      },
+      "change_type": "cloudtrail_disabled"
+    },
+    {
+      "id": "iam:admin_grant:entity_name:AppRole:entity_type:role:policy_arn:arn:aws:iam::aws:policy/AdministratorAccess:policy_name:AdministratorAccess",
+      "category": "IAM",
+      "severity": "Critical",
+      "description": "New policy attachment: AdministratorAccess to role AppRole",
+      "evidence": {
+        "entity_type": "role",
+        "entity_name": "AppRole",
+        "policy_arn": "arn:aws:iam::aws:policy/AdministratorAccess",
+        "policy_name": "AdministratorAccess"
+      },
+      "change_type": "admin_grant"
+    },
+    {
+      "id": "exposure:public_db_port:cidr:0.0.0.0/0:port:5432:protocol:tcp:sg_id:sg-222",
+      "category": "Exposure",
+      "severity": "Critical",
+      "description": "Public inbound rule on 5432 for sg-222",
+      "evidence": {
+        "sg_id": "sg-222",
+        "port": 5432,
+        "protocol": "tcp",
+        "cidr": "0.0.0.0/0"
+      },
+      "change_type": "public_db_port"
+    },
+    {
+      "id": "logging:config_disabled:enabled:False",
+      "category": "Logging",
+      "severity": "Medium",
+      "description": "AWS Config recording disabled",
+      "evidence": {
+        "enabled": false
+      },
+      "change_type": "config_disabled"
+    },
+    {
+      "id": "logging:cloudtrail_validation_disabled:trail:OrgTrail",
+      "category": "Logging",
+      "severity": "Medium",
+      "description": "CloudTrail validation disabled for OrgTrail",
+      "evidence": {
+        "trail": "OrgTrail"
+      },
+      "change_type": "cloudtrail_validation_disabled"
+    },
+    {
+      "id": "iam:trust_policy_change:role_name:AppRole",
+      "category": "IAM",
+      "severity": "Medium",
+      "description": "Role trust policy changed for AppRole",
+      "evidence": {
+        "role_name": "AppRole"
+      },
+      "change_type": "trust_policy_change"
+    },
+    {
+      "id": "iam:access_key_new:access_key_id:AKIANEW:create_date:2025-01-15T00:00:00+00:00:user_name:bob",
+      "category": "IAM",
+      "severity": "Low",
+      "description": "New access key created for user bob (379 days ago)",
+      "evidence": {
+        "user_name": "bob",
+        "access_key_id": "AKIANEW",
+        "create_date": "2025-01-15T00:00:00+00:00"
+      },
+      "change_type": "access_key_new"
+    }
+  ],
+  "sections": {
+    "iam": [
+      {
+        "id": "iam:admin_grant:entity_name:AppRole:entity_type:role:policy_arn:arn:aws:iam::aws:policy/AdministratorAccess:policy_name:AdministratorAccess",
+        "category": "IAM",
+        "severity": "Critical",
+        "description": "New policy attachment: AdministratorAccess to role AppRole",
+        "evidence": {
+          "entity_type": "role",
+          "entity_name": "AppRole",
+          "policy_arn": "arn:aws:iam::aws:policy/AdministratorAccess",
+          "policy_name": "AdministratorAccess"
+        },
+        "change_type": "admin_grant"
+      },
+      {
+        "id": "iam:trust_policy_change:role_name:AppRole",
+        "category": "IAM",
+        "severity": "Medium",
+        "description": "Role trust policy changed for AppRole",
+        "evidence": {
+          "role_name": "AppRole"
+        },
+        "change_type": "trust_policy_change"
+      },
+      {
+        "id": "iam:access_key_new:access_key_id:AKIANEW:create_date:2025-01-15T00:00:00+00:00:user_name:bob",
+        "category": "IAM",
+        "severity": "Low",
+        "description": "New access key created for user bob (379 days ago)",
+        "evidence": {
+          "user_name": "bob",
+          "access_key_id": "AKIANEW",
+          "create_date": "2025-01-15T00:00:00+00:00"
+        },
+        "change_type": "access_key_new"
+      }
+    ],
+    "exposure": [
+      {
+        "id": "exposure:public_db_port:cidr:0.0.0.0/0:port:5432:protocol:tcp:sg_id:sg-222",
+        "category": "Exposure",
+        "severity": "Critical",
+        "description": "Public inbound rule on 5432 for sg-222",
+        "evidence": {
+          "sg_id": "sg-222",
+          "port": 5432,
+          "protocol": "tcp",
+          "cidr": "0.0.0.0/0"
+        },
+        "change_type": "public_db_port"
+      }
+    ],
+    "logging": [
+      {
+        "id": "logging:cloudtrail_disabled:trail:OrgTrail",
+        "category": "Logging",
+        "severity": "Critical",
+        "description": "CloudTrail logging disabled for OrgTrail",
+        "evidence": {
+          "trail": "OrgTrail"
+        },
+        "change_type": "cloudtrail_disabled"
+      },
+      {
+        "id": "logging:cloudtrail_validation_disabled:trail:OrgTrail",
+        "category": "Logging",
+        "severity": "Medium",
+        "description": "CloudTrail validation disabled for OrgTrail",
+        "evidence": {
+          "trail": "OrgTrail"
+        },
+        "change_type": "cloudtrail_validation_disabled"
+      },
+      {
+        "id": "logging:config_disabled:enabled:False",
+        "category": "Logging",
+        "severity": "Medium",
+        "description": "AWS Config recording disabled",
+        "evidence": {
+          "enabled": false
+        },
+        "change_type": "config_disabled"
+      }
+    ]
+  },
+  "appendix": {
+    "current_state_summary": {
+      "iam": {
+        "policy_attachments": 2,
+        "access_keys": 2,
+        "roles": 1
+      },
+      "exposure": {
+        "public_security_group_rules": 2,
+        "buckets": 1
+      },
+      "logging": {
+        "cloudtrail_trails": 1,
+        "config_enabled": false
+      }
+    },
+    "suppressions_applied": [
+      {
+        "id": "exposure:s3_public_policy:bucket:my-bucket:public_policy:True",
+        "reason": "Approved public bucket for static site"
+      },
+      {
+        "id": "exposure:s3_public_access_block_disabled:bucket:my-bucket:public_access_block:False",
+        "reason": "Approved public bucket for static site"
+      }
+    ],
+    "limitations": [
+      "This verifies configuration signals only; it does not guarantee security, compliance, or recoverability.",
+      "Some checks (S3 policy public heuristics, AWS Config) are best-effort and may be incomplete."
+    ]
+  }
+}
